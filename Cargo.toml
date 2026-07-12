@@ -1,0 +1,13 @@
+[package]
+name = "palette"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "palette"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
