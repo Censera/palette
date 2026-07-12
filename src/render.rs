@@ -53,6 +53,7 @@ pub fn long_bright() {
 fn print_fg_row(bg: Option<Color>) {
     print_fg_line(Base::ALL.map(Color::Standard), bg);
     print_fg_line(Base::ALL.map(Color::Bright), bg);
+    println!();
 }
 
 fn print_fg_line(colors: [Color; 8], bg: Option<Color>) {
