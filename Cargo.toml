@@ -1,6 +1,6 @@
 [package]
 name = "palette"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
 
 [[bin]]
@@ -8,6 +8,8 @@ name = "palette"
 path = "src/main.rs"
 
 [profile.release]
-opt-level = "z"
-lto = true
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
 strip = true
