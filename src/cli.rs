@@ -8,7 +8,8 @@ use std::io::{self, IsTerminal, Write};
 use std::process::ExitCode;
 
 pub const USAGE: &str = "\
-palette - terminal palette inspection and color conversion
+palette
+  terminal palette inspection and color conversion
 
 usage:
   palette                          compact 16-color preview
@@ -24,9 +25,7 @@ usage:
 <output> is HEX, RGB, HSL, HSV, OKLab, or OKLCH (case-insensitive).
 
 options:
-  --color=<auto|always|never>      ANSI colors in output (default: auto)
-
-NO_COLOR is respected in auto mode.";
+  --color=<auto|always|never>      ANSI colors in output (default: auto)";
 
 #[derive(Debug, PartialEq)]
 pub enum Command {
